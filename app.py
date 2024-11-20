@@ -21,7 +21,7 @@ def poke_json():
         "nombre": poke["nombre"],
         "altura": poke["altura"],
         "habilidad": poke["habilidad"],
-        "container_id": "ID_DEL_CONTENEDOR"
+        "container_id": "https://storage.cloud.google.com/pokeneas-danniela/poke2.webp"
     })
 
 @app.route('/pokeimage', methods=['GET'])
@@ -31,7 +31,7 @@ def poke_image():
         <img src="{{ poke['imagen'] }}" alt="Pokenea">
         <p>{{ poke['frase'] }}</p>
         <p>Container ID: {{ container_id }}</p>
-    """, poke=poke, container_id="ID_DEL_CONTENEDOR")
+    """, poke=poke, container_id="https://storage.cloud.google.com/pokeneas-danniela/poke1.webp")
 
 if __name__ == '__main__':
     print("Flask está corriendo...")
